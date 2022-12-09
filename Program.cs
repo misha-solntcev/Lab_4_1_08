@@ -37,6 +37,11 @@ namespace Lab_4_1_08
 
             Console.WriteLine(sum_even);
             Console.WriteLine(sum_odd);
+
+            // Linq
+            Console.WriteLine("^2: " + arr.Where((x, i) => i % 2 == 0).Select(x => x * x).Sum());
+            Console.WriteLine("^3: " + arr.Where((x, i) => i % 2 != 0).Select(x => x * x * x).Sum());
+
             Console.ReadKey();
         }
     }
